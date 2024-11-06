@@ -2,7 +2,7 @@ const sliders = [
     {
         id: 1,
         image: "/images/slider3.png",
-        title: "LOVE EVERY RIDE",
+        title: "LOVE EVERY RIDE, LOVE ",
         text: "Believe in the power of the ride",
         button: "Shop Now"
     },
