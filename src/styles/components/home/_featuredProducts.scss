@@ -1,0 +1,32 @@
+
+.featured_product {
+    background-image: url("../../../public/images/background.png");
+    background-size: cover;
+    background-position: center;
+
+    .product_card_container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        padding-top: 20px;
+        max-width: 1440px;
+        margin: 0 auto;
+        gap: 15px;
+
+        @media screen and (max-width: 1200px) {
+            grid-template-columns: repeat(3, 1fr); // Show 3 columns on large tablets/smaller desktops
+        }
+
+        @media screen and (max-width: 992px) {
+            grid-template-columns: repeat(2, 1fr); // Show 2 columns on medium tablets
+        }
+
+        @media screen and (max-width: 690px) {
+            grid-template-columns: repeat(1, 1fr); // Show 1 column on mobile screens
+            padding: 0 10px; // Add padding for smaller screens
+        }
+
+        @media screen and (max-width: 480px) {
+            padding: 0 5px; // Extra padding adjustment for very small screens
+        }
+}
+}

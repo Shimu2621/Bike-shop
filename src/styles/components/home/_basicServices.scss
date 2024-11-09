@@ -1,6 +1,7 @@
 .basic-services {
-
-    padding-top: 60px;
+    padding: 80px;
+  flex-wrap: wrap;
+    // padding-top: 80px;
     text-align: center;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -22,7 +23,7 @@
         flex-direction: column; // Stack items vertically
         justify-content: center;
         align-items: center;
-        gap: 30px;
+        gap: 10px;
 
 
         @media screen and (max-width: 1080px) {
@@ -49,35 +50,33 @@
             
         }
 
-        .text {
+        h4 {
             text-align: center;
+            font-weight: 700;
+            font-size: 20px;
+            margin-bottom: 5px;
+
+            @media screen and (max-width: 1360px) {
+                font-size: 24px;
+            }
             
-            h2 {
-                font-size: 26px;
-                font-weight: 700;
-                color: $text_black;
-                padding-top: 10px;
-                margin-bottom: 15px;
-                
-                @media screen and (max-width: 1360px) {
-                    font-size: 24px;
-                }
-                
-                @media screen and (max-width: 1080px) {
-                    font-size: 20px;
-                }
-                
-                @media screen and (max-width: 740px) {
-                    font-size: 18px;
-                }
-                
-                @media screen and (max-width: 540px) {
-                    font-size: 16px;
-                }
-                p {
+            @media screen and (max-width: 1080px) {
+                font-size: 20px;
+            }
+            
+            @media screen and (max-width: 740px) {
+                font-size: 18px;
+            }
+            
+            @media screen and (max-width: 540px) {
+                font-size: 16px;
+            }
+        }
+        p {
                     font-size: 18px;
                     font-weight: 500;
                     color: $text_gray;
+                    margin-top: 5px;
     
                     @media screen and (max-width: 1080px) {
                         font-size: 16px;
@@ -92,6 +91,12 @@
                     }
                 }
             }
-        }
-    }
+
+            .divider {
+                width: 100%;
+                height: 1px;
+                background-color: $text_gray;
+                margin: 0;
+            }
+    
 }

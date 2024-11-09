@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, FreeMode, Autoplay } from "swiper/modules";
 import sliders from "../../staticData/slider";
@@ -6,9 +6,15 @@ import sliders from "../../staticData/slider";
 import "swiper/css";
 import "swiper/css/pagination";
 
+// import Aos from "aos";
+// import "aos/dist/aos.css";
+
 const HomeSlider = () => {
+  // useEffect(() => {
+  //   Aos.init({ duration: 1000 });
+  // }, []);
   return (
-    <div className="home_slider main_container">
+    <div className="home_slider">
       <Swiper
         pagination={{
           dynamicBullets: true,
