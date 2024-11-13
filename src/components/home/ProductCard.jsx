@@ -9,10 +9,12 @@ const ProductCard = ({ product }) => {
   console.log(product);
 
   return (
-    <div className="product_card">
+    <div className="product_card main-container">
       <Link to={`/product/${product?.id}`} className="product_img">
         <div>
           <img
+            // width={200}
+            // height={300}
             // className="product_thumbnail"
             src={product?.thumbnail}
             alt={`product ${product.name}`}

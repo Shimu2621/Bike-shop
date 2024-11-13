@@ -1,97 +1,231 @@
-.product_card {
-    border-radius: 8px;
-    padding: 5px 5px 0px 5px;
-    margin: 0 auto;
-    cursor: pointer;
-    border: 1px solid $dark-brown;
-    // background-color: rgb(184, 81, 81);
-    // background-color: #e25454;
-    transition: all 0.3s ease;
+// .product_card {
+//     border-radius: 5px;
+//     // margin: 0 auto;
+//     cursor: pointer;
+//     background-color: rgb(233, 221, 221);
+//     border: none;
+//     box-shadow: $box-shadow ;
+//     border: 1px solid rgb(168, 162, 162);
+//     // transition: all 0.3s ease;
+//     transition: transform 0.3s ease;
+//     overflow: hidden;
+//     margin-bottom: 20px;
 
-    &:hover {
-        transform: scale(1.05);
-    }
+//     &:hover {
+//         transform: scale(1.05);
+//     }
 
 
-    .product_img {
-        width: 100%;
-        display: flex;
-        height: 300px;
-        background-color: $white;
-        border: 5px solid $light-brown;
-        border-radius: 8px 8px 0px 0px;
+//     .product_img {
+//         width: 100%;
+//         display: flex;
+//         align-items: center;
+//         justify-content: center;
 
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            margin: 0 auto;
-            border-radius: 10px 10px 0px 0px;
-        }
+//         img {
+//             max-width: 0 auto;
+//             width: 370px;
+//             height: 230px;
+//             object-fit: contain;
+//             // margin: 0 auto;
+//             border-radius: 5px 5px 0px 0px;
+//         }
 
-        @media screen and (max-width: 650px) {
-            // width:  80%;
-            // height: 80%;
-        }
+//         @media screen and (max-width: 650px) {
+//             width:  80%;
+//             height: 80%;
+//         }
 
-    }
+//     }
 
-    .product_name {
-        font-size: $font-size-sm;
-        color: $light-brown;
-        padding-top: 20px;
-        margin: 10px;
-        background-image: linear-gradient(45deg, $dark-btn, $light-btn);
-    background-clip: text;
-    color: transparent;
-    padding-bottom: 8px;
-    font-weight: 700;
-    }
+//     .product_name {
+//         font-size: $font-size-sm;
+//         color: $light-brown;
+//         padding-top: 20px;
+//         margin: 10px;
+//         background-image: linear-gradient(45deg, $dark-btn, $light-btn);
+//     background-clip: text;
+//     color: transparent;
+//     padding-bottom: 8px;
+//     font-weight: 700;
+//     }
 
-    .rating {
-        margin: 10px;
+//     .rating {
+//         margin: 10px;
         
-        .ant-rate-star-half .ant-rate-star-first {
-            color: #f6d30c;
+//         .ant-rate-star-half .ant-rate-star-first {
+//             color: #f6d30c;
+//         }
+//     }
+
+//         .product_price {
+//             display: flex;
+//             flex-direction: row;
+//             align-items: center;
+//             justify-content: space-between;
+//             // margin: 10px;
+//             padding: 5px;
+//             .price {      
+//                 font-size: $font-size-sm;
+//                 color: $light-brown;
+//                 padding-top: 10px;
+//                 margin: 10px;
+//                 background-image: linear-gradient(45deg, $dark-btn, $light-btn);
+//                 background-clip: text;
+//                 color: transparent;
+//                 padding-bottom: 8px;
+//                 font-weight: 700;
+//             }
+//             .old_price {
+//                 font-size: $font-size-base;
+//                 color: rgb(161, 101, 101);
+//                 font-weight: 500;
+//                 padding-left: 8px;
+//                 text-decoration: line-through;
+//             }
+//             // .btn {
+//             //     margin: 20px;
+//             //     background-color: brown;
+//             //     color: $white;
+//             //     background: linear-gradient(45deg, $dark-btn, $light-btn); // Gradient from coral to dodger blue
+//             //     transition: background 0.3s ease;
+            
+//             //     &:hover {
+//             //       background: linear-gradient(45deg, $light-btn, $dark-btn); // Reverse gradient on hover
+//             //     }
+//             // }
+//         }
+      
+// }
+
+.product_card {
+    background-color: #fff;
+    // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: $box-shadow ;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease;
+    max-width: 320px;
+    margin: 1rem auto;
+    padding: 1rem;
+  
+    &:hover {
+      transform: scale(1.05);
+    }
+  
+    .product_img {
+      display: block;
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        object-fit: cover;
+      }
+    }
+  
+    .product_name {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #333;
+      margin: 1rem 0;
+    }
+  
+    .rating {
+      margin: 0.5rem 0;
+      .ant-rate-star {
+        font-size: 1.2rem;
+      }
+    }
+  
+    .product_price {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 1rem;
+  
+      .price {
+        font-size: 1rem;
+        color: #d32f2f;
+        font-weight: bold;
+  
+        .old_price {
+          font-size: 1rem;
+          color: #888;
+          text-decoration: line-through;
+          margin-left: 0.5rem;
+        }
+      }
+  
+    //   .btn {
+    //     background-color: #007bff;
+    //     color: #fff;
+    //     padding: 0.5rem 1rem;
+    //     border: none;
+    //     border-radius: 4px;
+    //     font-size: 1rem;
+    //     cursor: pointer;
+    //     transition: background-color 0.3s ease;
+  
+    //     &:hover {
+    //       background-color: #0056b3;
+    //     }
+    //   }
+      .btn {
+        margin: 20px;
+        background-color: brown;
+        color: $white;
+        background: linear-gradient(45deg, $dark-btn, $light-btn); // Gradient from coral to dodger blue
+        transition: background 0.3s ease;
+    
+        &:hover {
+            background: linear-gradient(45deg, $light-btn, $dark-btn); // Reverse gradient on hover
         }
     }
-
-        .product_price {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-between;
-            // margin: 10px;
-            padding: 5px;
-            .price {      
-                font-size: $font-size-sm;
-                color: $light-brown;
-                padding-top: 10px;
-                margin: 10px;
-                background-image: linear-gradient(45deg, $dark-btn, $light-btn);
-                background-clip: text;
-                color: transparent;
-                padding-bottom: 8px;
-                font-weight: 700;
-            }
-            .old_price {
-                font-size: $font-size-base;
-                color: rgb(161, 101, 101);
-                font-weight: 500;
-                padding-left: 8px;
-                text-decoration: line-through;
-            }
-            .btn {
-                margin: 20px;
-                background-color: brown;
-                color: $white;
-                background: linear-gradient(45deg, $dark-btn, $light-btn); // Gradient from coral to dodger blue
-                transition: background 0.3s ease;
-            
-                &:hover {
-                  background: linear-gradient(45deg, $light-btn, $dark-btn); // Reverse gradient on hover
-                }
-            }
+    }
+  
+    // Responsive styles
+    @media (max-width: 768px) {
+      max-width: 220px;
+      padding: 0.8rem;
+  
+      .product_name {
+        font-size: 1rem;
+      }
+  
+      .price {
+        font-size: 1.3rem;
+  
+        .old_price {
+          font-size: 0.9rem;
         }
-      
-}
+      }
+  
+      .btn {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.8rem;
+      }
+    }
+  
+    @media (max-width: 480px) {
+      max-width: 180px;
+      padding: 0.6rem;
+  
+      .product_name {
+        font-size: 0.9rem;
+      }
+  
+      .price {
+        font-size: 1.1rem;
+  
+        .old_price {
+          font-size: 0.8rem;
+        }
+      }
+  
+      .btn {
+        font-size: 0.8rem;
+        padding: 0.3rem 0.6rem;
+      }
+    }
+  }

@@ -1,0 +1,124 @@
+.choose_section {
+    padding-top: 80px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 1440px;
+    margin: 0 auto;
+
+    @media screen and (max-width: 945px) {
+      grid-template-columns: 1fr;
+    }
+
+    // .choose_img {
+    //   @media screen and (max-width: 755px) {
+    //        width: 100%;
+    //        display: flex;   
+    //       justify-content: center;
+    //       align-items: center;
+    //       }
+
+    //       @media screen and (max-width: 640px) {
+    //         width: 400px;
+    //      margin: 0 auto;
+    //       height: 400px;
+    //        }
+    // }
+
+    .section_list {
+        padding-top: 40px;
+
+        @media screen and (max-width: 1300px) {
+           padding: 18px;
+        }
+
+       .section_items {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        font-size: 16px;
+        color: $text_gray;
+
+        @media screen and (min-width: 645px) {
+          font-size: 14px;
+          margin-top: 50px;
+        }
+
+        // img {
+        //   @media screen and (max-width: 645px) {
+        //     margin-top: 50px;
+        //   }
+        //   @media screen and (max-width: 640px) {
+        //     display: none;
+        //   }
+        // }
+
+        h5 {
+            font-weight: 700;
+
+            @media screen and (max-width: 645px) {
+              margin-top: 50px;
+            }
+            @media screen and (max-width: 640px) {
+              display: none;
+            }
+        }
+       } 
+
+       .section_text  {
+        h2{
+            background-image: linear-gradient(45deg, $dark-btn, $light-btn);
+            background-clip: text;
+            color: transparent;
+            font-size: 2.5rem;
+            font-weight: 700;
+            padding-bottom: 20px;
+            // transition: font-size 0.3s ease;
+            
+          
+        @media screen and (max-width: 1300px) {
+          font-size: 2.5rem;
+        }
+
+        @media screen and (max-width: 1260px) {
+          font-size: 2rem;
+        }
+
+        @media screen and (max-width: 1024px) {
+          font-size: 1.8rem;
+        }
+
+        @media screen and (max-width: 768px) {
+          font-size: 1.5rem;
+        }
+
+        @media screen and (max-width: 560px) {
+          font-size: 1.2rem;
+        }
+        }
+
+        p {
+            font-size: 1rem;
+            font-weight: 300;
+            padding-bottom: 8px;
+            margin-top: 20px;
+            line-height: 25px;
+        }
+       }
+
+       button {
+        margin-top: 30px;
+        padding: 10px 20px;
+        font-size: 1rem;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        color: white; // Text color
+        background: linear-gradient(45deg, $dark-btn, $light-btn); // Gradient from coral to dodger blue
+        transition: background 0.3s ease;
+    
+        &:hover {
+          background: linear-gradient(45deg, $light-btn, $dark-btn); // Reverse gradient on hover
+        }
+      }
+    }
+}

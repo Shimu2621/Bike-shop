@@ -1,0 +1,247 @@
+.footer {
+    padding-top: 50px;
+    background-color: $light-white;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+  
+.footer-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+}
+
+.footer-heading {
+    color: rgb(57, 44, 44);
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.color {
+    color: rgb(57, 44, 44);
+}
+  
+  p {
+    margin-top: 10px;
+    line-height: 1.2;
+    color: rgb(57, 44, 44);
+    font-weight: 600;
+}
+
+.column-section {
+    .title {
+        display: flex;
+            flex-direction: column;
+            // justify-content: center;
+            align-items: center;
+            text-align: center;
+        h3 {
+            font-size: 24px;
+            font-weight: 700;
+            padding: 10px;
+            color: $dark-orange;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+            li {
+                color: rgb(84, 80, 73);
+                font-weight: 600;
+                list-style: none;
+                margin-bottom: 10px;
+            }
+        }
+    } 
+}
+.contact-info p {
+    white-space: nowrap;
+}
+
+.contact-span {
+    color: $dark-orange;
+}
+.icon-ho {
+    color: $dark-orange;
+}
+
+.footer-icon {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px; 
+  }
+
+.footer-ico {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 15px;
+}
+
+.first-icon {
+    display: flex;
+}
+
+
+.footer-ico h4 {
+    margin-bottom: 10px;
+    color: rgb(47, 46, 46);
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 8px;
+}
+
+.all-image {
+    display: flex;
+    align-items: center;
+    margin-left: 110px;
+    padding-bottom: 10px;
+}
+
+.all-image h4 {
+    margin-bottom: 10px;
+    padding-right: 15px;
+    color: rgb(47, 46, 46);
+    font-size: 18px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.logo-image {
+    width: 50px; 
+    padding-left: 10px;
+    padding-bottom: 20px;
+    margin: 0;
+}
+
+.fb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px; 
+    height: 30px; 
+    border-radius: 50%;
+    margin-right: 10px;
+    background-color: #3b5998;
+}
+  
+.twit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px; 
+    height: 30px; 
+    border-radius: 50%;
+    margin-right: 10px;
+    background-color: #1da1f2; 
+}
+  
+.insta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px; 
+    height: 30px; 
+    border-radius: 50%;
+    margin-right: 10px;
+    background-color: #bc2a8d; 
+}
+  
+.google {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px; 
+    height: 30px; 
+    border-radius: 50%;
+    margin-right: 10px;
+    background-color: #dd4b39; 
+}
+  
+.pin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px; 
+    height: 30px; 
+    border-radius: 50%;
+    margin-right: 10px;
+    background-color: #bd081c; 
+}
+  
+.footer-ico span svg {
+    color: #dad1d1; 
+}
+
+@media screen and (max-width: 768px) {
+    .footer-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px; 
+    }
+
+    .tag {
+        white-space: wrap;
+    }
+
+    .basket-img {
+        width: 170px;
+    }
+    .footer-heading,
+    .footer-info p,
+    .contact-info p,
+    .footer-sec p,
+    .tag {
+        font-size: 12px;
+        padding-right: 4px;
+    }
+
+    .contact-info,
+    .information,
+    .instagram {
+        padding-right: 0;
+        font-size: 9px; 
+    }
+
+    .footer-icon {
+        justify-content: center; 
+    }
+
+    .all-image {
+        margin-left: 0; 
+    }
+
+    .all-image h4 {
+        font-size: 6px;
+        
+    }
+
+    .logo-image {
+        width: 20%; 
+        margin: 0;
+    }
+
+    .footer-ico span {
+        width: 15px; 
+        height: 20px; 
+    }
+
+    .footer-ico h4 {
+        font-size: 10px;
+
+    }
+
+    .end-sec {
+        text-align: center;
+    }
+
+    .footer-sec {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .policy-sec {
+        justify-content: center; 
+    }
+}

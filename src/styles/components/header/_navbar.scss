@@ -2,10 +2,10 @@
     background-color: $light-white;
     color: $info-color;
     
-    .main_container {
+    .navbar_container {
         display: flex;
         justify-content: space-between;
-        margin: 0 25px;
+        margin: 0 10px;
         align-items: center;
         .navbar_logo {
             flex-grow: 1;
@@ -78,8 +78,9 @@
 
     .navbar_links {
         display: flex;
+        font-weight: 600;
         right: 20%;
-        gap: 40px;
+        gap: 25px;
         justify-content: space-between;
         align-items: center;
         // margin: 0; /* Remove default margin */
@@ -117,7 +118,8 @@
 
             a {  
                 text-decoration: none;
-                color: $dark-color;
+                // color: $dark-color;
+                color: $text_gray;
                 font-size: 20px;
                 $font-family-base: 'Arial, sans-serif';
                 $font-size-bg: 1.5rem;
@@ -136,6 +138,7 @@
             cursor: pointer;
             border: none;
             font-size: 1.2rem;
+            font-weight: 900;
             display: flex;
             justify-content: space-between;
 

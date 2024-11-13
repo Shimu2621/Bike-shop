@@ -35,56 +35,61 @@ const Navbar = () => {
   return (
     <nav className="main_navbar">
       <div className="main_container">
-        <Link to="/" className="navbar_logo">
-          <img
-            src="images/bike-logo.png"
-            width={150}
-            height={150}
-            alt="bicycle-logo"
-          />
-        </Link>
+        <div className="navbar_container">
+          <Link to="/" className="navbar_logo">
+            <img
+              src="images/bike-logo.png"
+              width={150}
+              height={150}
+              alt="bicycle-logo"
+            />
+          </Link>
 
-        <div className="search_wrapper">
-          <div className="input_wrapper">
-            <input placeholder="search for..."></input>
-            <i className="search_icon">
-              <CiSearch size={25} />
-            </i>
+          <div className="search_wrapper">
+            <div className="input_wrapper">
+              <input placeholder="search for..."></input>
+              <i className="search_icon">
+                <CiSearch size={25} />
+              </i>
+            </div>
           </div>
+
+          <div className="navbar_links">
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/brands">Brands</Link>
+            </li>
+            <li>
+              <Link to="/contact">Contact Us</Link>
+            </li>
+            <li>
+              <Link href="/services">services</Link>
+            </li>
+            <li>
+              <Link href="/about">About Us</Link>
+            </li>
+
+            <button className="nav_button">
+              <FaRegUser size={20} />
+            </button>
+            <button className="nav_button">
+              <RiShoppingBagLine size={23} />
+            </button>
+          </div>
+
+          <Dropdown
+            trigger={["click"]}
+            className="nav_menu_dropdown_button"
+            overlayClassName={"nav_menu_dropdown"}
+            menu={{ items }}
+          >
+            <span onClick={(e) => e.preventDefault()}>
+              <HiMiniBars3CenterLeft size={28} color="brown" />
+            </span>
+          </Dropdown>
         </div>
-
-        <div className="navbar_links">
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/brands">Brands</Link>
-          </li>
-          <li>
-            <Link to="/contact">Contact</Link>
-          </li>
-          <li>
-            <Link href="/services">services</Link>
-          </li>
-
-          <button className="nav_button">
-            <FaRegUser size={20} />
-          </button>
-          <button className="nav_button">
-            <RiShoppingBagLine size={23} />
-          </button>
-        </div>
-
-        <Dropdown
-          trigger={["click"]}
-          className="nav_menu_dropdown_button"
-          overlayClassName={"nav_menu_dropdown"}
-          menu={{ items }}
-        >
-          <span onClick={(e) => e.preventDefault()}>
-            <HiMiniBars3CenterLeft size={28} color="brown" />
-          </span>
-        </Dropdown>
       </div>
     </nav>
   );
