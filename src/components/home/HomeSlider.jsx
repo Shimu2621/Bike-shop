@@ -8,6 +8,7 @@ import "swiper/css/pagination";
 
 // import Aos from "aos";
 // import "aos/dist/aos.css";
+import { Link } from "react-router-dom";
 
 const HomeSlider = () => {
   // useEffect(() => {
@@ -39,7 +40,9 @@ const HomeSlider = () => {
               <div className="slider_text">
                 <h2>{slider?.title}</h2>
                 <p>{slider?.text}</p>
-                <button>{slider?.button}</button>
+                <Link to="/brands">
+                  <button>{slider?.button}</button>
+                </Link>
               </div>
             </SwiperSlide>
           );

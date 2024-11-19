@@ -18,14 +18,20 @@ const Reviews = () => {
     Aos.init({ duration: 1000 });
   }, []);
   return (
-    <div className="reviews main_container">
+    <div className="reviews main_container" data-aos="fade-up">
       <div className="reviews_section">
-        <div className="reviews_title">
+        <div
+          className="reviews_title"
+          data-aos="fade-down"
+          data-aos-delay="200"
+        >
           <img width={50} height={50} src={choose} alt="choose" />
           <h4 className="title">TESTIMONIALS</h4>
         </div>
-        <h1>See What They Said About Us</h1>
-        <p>
+        <h1 data-aos="fade-up" data-aos-delay="400">
+          See What They Said About Us
+        </h1>
+        <p data-aos="fade-up" data-aos-delay="600">
           We are very pleased to hear that our customers are satisfied with our
           services. We believe every customer should feel welcome and
           comfortable in our shops. Below are a few emails we have received from
@@ -49,9 +55,13 @@ const Reviews = () => {
         spaceBetween={0}
         className="mySwiper"
       >
-        {reviews?.map((review) => {
+        {reviews?.map((review, index) => {
           return (
-            <SwiperSlide key={review?.id}>
+            <SwiperSlide
+              key={review?.id}
+              // data-aos="fade-up"
+              // data-aos-delay={index * 150}
+            >
               <div className="review_card">
                 <div className="review_img">
                   <img
@@ -59,9 +69,12 @@ const Reviews = () => {
                     height={120}
                     src={review?.image}
                     alt={review?.name}
+                    data-aos="flip-right"
                   />
                 </div>
-                <h3 className="name">{review?.name}</h3>
+                <h3 className="name" data-aos="fade-up">
+                  {review?.name}
+                </h3>
 
                 <div className="rating">
                   <Rate
@@ -73,13 +86,18 @@ const Reviews = () => {
                     disabled
                   />
                 </div>
-                <div className="review_text">
+                <div
+                  className="review_text"
+                  data-aos="fade-up"
+                  data-aos-delay="300"
+                >
                   <img
                     className="left"
                     height={25}
                     width={25}
                     src={quotes}
                     alt={quotes}
+                    data-aos="fade-right"
                   />
 
                   <p>{review?.review}</p>
@@ -90,6 +108,7 @@ const Reviews = () => {
                     width={25}
                     src={quote}
                     alt={quote}
+                    data-aos="fade-left"
                   />
                 </div>
               </div>

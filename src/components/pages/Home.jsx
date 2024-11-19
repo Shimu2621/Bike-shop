@@ -6,6 +6,8 @@ import TopCategories from "../home/TopCategories";
 import Reviews from "../home/Reviews";
 import TopBrands from "../home/TopBrands";
 import ChooseUs from "../home/ChooseUs";
+import FeaturedServices from "../home/FeaturedServices";
+import OurGallery from "../home/OurGallery";
 
 const Home = () => {
   return (
@@ -14,7 +16,9 @@ const Home = () => {
       <BasicServices />
       <FeaturedProducts />
       <ChooseUs />
+      <OurGallery />
       <TopCategories />
+      <FeaturedServices />
       <TopBrands />
       <Reviews />
     </div>

@@ -5,7 +5,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import ProductCard from "../home/ProductCard";
 
-const Brands = () => {
+const ProductPage = () => {
   useEffect(() => {
     Aos.init();
   }, []);
@@ -43,4 +43,4 @@ const Brands = () => {
   );
 };
 
-export default Brands;
+export default ProductPage;

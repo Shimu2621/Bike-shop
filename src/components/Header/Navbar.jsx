@@ -3,15 +3,15 @@ import { Link } from "react-router-dom";
 //Icons
 import { CiSearch } from "react-icons/ci";
 import { RiShoppingBagLine } from "react-icons/ri";
-import { FaRegUser } from "react-icons/fa";
 import { HiMiniBars3CenterLeft } from "react-icons/hi2";
+import { FaRegUser } from "react-icons/fa";
 //external imports
 import { Dropdown } from "antd";
 
 const Navbar = () => {
   const items = [
     {
-      label: <Link href="/">Home</Link>,
+      label: <Link to="/">Home</Link>,
       key: "1",
     },
     {
@@ -27,7 +27,7 @@ const Navbar = () => {
       key: "4",
     },
     {
-      label: <Link href="/services">services</Link>,
+      label: <Link to="/services">services</Link>,
       key: "5",
     },
   ];
@@ -59,24 +59,27 @@ const Navbar = () => {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/brands">Brands</Link>
+              <Link to="/productPage">products</Link>
             </li>
             <li>
               <Link to="/contact">Contact Us</Link>
             </li>
             <li>
-              <Link href="/services">services</Link>
+              <Link to="/servicePage">Services</Link>
             </li>
             <li>
-              <Link href="/about">About Us</Link>
+              <Link to="/about">About Us</Link>
             </li>
-
-            <button className="nav_button">
-              <FaRegUser size={20} />
-            </button>
-            <button className="nav_button">
-              <RiShoppingBagLine size={23} />
-            </button>
+            <li>
+              <Link to="/signup">
+                <FaRegUser size={20} />
+              </Link>
+            </li>
+            <li>
+              <Link to="/">
+                <RiShoppingBagLine size={23} />
+              </Link>
+            </li>
           </div>
 
           <Dropdown

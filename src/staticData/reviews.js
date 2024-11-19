@@ -25,14 +25,14 @@ const reviews = [
         name: "Majida Sharley",
         rating: 4.5,
         image: "/images/review.png",
-        review: "The staff was super helpful and knowledgeable. They helped me to choose the perfect bike. I’m thrilled!"
+        review: "The staff was super helpful and knowledgeable. They helped me to choose the perfect bike."
     },
     {
-        id: 4,
-        name: "Majida Sharley",
-        rating: 4.5,
-        image: "/images/review.png",
-        review: "I purchased Domane from this store.I had an excellent experience work with them,worth every penny! "
+        id: 5,
+        name: "Richard Ashley",
+        rating: 5,
+        image: "/images/men1.png",
+        review: "I had a fantastic experience today buying my first road bike. The bike’s build quality is exceptional."
     },
     
 ]

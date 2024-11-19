@@ -3,8 +3,11 @@ import "./App.css";
 import Navbar from "./components/Header/Navbar";
 import Home from "./components/pages/Home";
 import Footer from "./components/Footer/Footer";
-import Brands from "./components/Brands/Brands";
-import ContactUs from "./components/ContactUs/ContactUs";
+import ServicePage from "./components/pages/ServicePage";
+import ProductPage from "./components/pages/ProductPage";
+import ContactUs from "./components/pages/ContactUs";
+import Signup from "./components/pages/Signup";
+import Signin from "./components/auth/Signin";
 
 function App() {
   return (
@@ -14,8 +17,11 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
-          <Route path="/brands" element={<Brands />} />
+          <Route path="/productPage" element={<ProductPage />} />
           <Route path="/contact" element={<ContactUs />} />
+          <Route path="/servicePage" element={<ServicePage />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="signin" element={<Signin />} />
         </Routes>
         <Footer />
       </div>
