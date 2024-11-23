@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 //Icons
 import { CiSearch } from "react-icons/ci";
@@ -9,21 +9,44 @@ import { FaRegUser } from "react-icons/fa";
 import { Dropdown } from "antd";
 
 const Navbar = () => {
+  const [user, setUser] = useState();
+
+  useEffect(() => {
+    const itemFromLocalStorage = localStorage.getItem("user");
+
+    // Check if the item exists in local storage
+    if (itemFromLocalStorage) {
+      // Parse the retrieved item
+      const parsedItem = JSON.parse(itemFromLocalStorage);
+
+      // Now you can use the parsed item as a JavaScript object
+      setUser(parsedItem);
+    } else {
+      console.log("Item not found in local storage");
+    }
+  }, [user]);
+  // console.log(user);
+
+  const handleLogOut = () => {
+    localStorage.removeItem("user");
+    setUser("");
+  };
+
   const items = [
     {
       label: <Link to="/">Home</Link>,
       key: "1",
     },
     {
-      label: <Link to="/brands">Brands</Link>,
+      label: <Link to="/products">products</Link>,
       key: "2",
     },
     {
-      label: <Link to="/contact">Contact</Link>,
+      label: <Link to="/contact-us">Contact Us</Link>,
       key: "3",
     },
     {
-      label: <Link to="/reviews">Reviews</Link>,
+      label: <Link to="/about-us">About Us</Link>,
       key: "4",
     },
     {
@@ -59,27 +82,37 @@ const Navbar = () => {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/productPage">products</Link>
+              <Link to="/products">Products</Link>
             </li>
             <li>
-              <Link to="/contact">Contact Us</Link>
+              <Link to="/contact-us">Contact Us</Link>
             </li>
             <li>
-              <Link to="/servicePage">Services</Link>
+              <Link to="/services">Services</Link>
             </li>
             <li>
-              <Link to="/about">About Us</Link>
-            </li>
-            <li>
-              <Link to="/signup">
-                <FaRegUser size={20} />
-              </Link>
+              <Link to="/about-us">About Us</Link>
             </li>
             <li>
               <Link to="/">
                 <RiShoppingBagLine size={23} />
               </Link>
             </li>
+            {user && user.imageUrl ? (
+              <div>
+                <img src={user.imageUrl} alt={user.fullName} />
+                <h4>{user.fullName}</h4>
+                <button className="btn" onClick={handleLogOut}>
+                  Log Out
+                </button>
+              </div>
+            ) : (
+              <li>
+                <Link to="/signup">
+                  <FaRegUser size={20} />
+                </Link>
+              </li>
+            )}
           </div>
 
           <Dropdown

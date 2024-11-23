@@ -2,10 +2,11 @@ import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { Input, Button, Divider } from "antd";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import signupanimation from "../../../public/signin.json";
 import Lottie from "lottie-react";
 import axios from "axios";
+import toast from "react-hot-toast";
 
 // Yup validation schema for Signup
 const RegisterSchema = Yup.object().shape({
@@ -29,6 +30,8 @@ const RegisterSchema = Yup.object().shape({
 });
 
 const Register = () => {
+  const navigate = useNavigate();
+
   const handleSubmit = (values) => {
     // Handle form submission
     console.log("Signup Form Data:", values);
@@ -36,10 +39,15 @@ const Register = () => {
     axios
       .post("http://localhost:5000/signup", values)
       .then((response) => {
-        console.log("Response", response.data.data);
+        console.log("Response", response.data);
+        if (response.data.data.acknowledged) {
+          toast.success("User created successfully");
+          navigate("/signin");
+        }
       })
       .catch((error) => {
         console.log("Error:", error);
+        toast.error("Something went wrong");
       });
   };
   return (
@@ -55,7 +63,7 @@ const Register = () => {
 
       {/* Right side animation */}
       <div className="register-right">
-        <h3>Creat an Account</h3>
+        <h3>Create an Account</h3>
         <Formik
           initialValues={{
             fullName: "",
@@ -66,7 +74,7 @@ const Register = () => {
           validationSchema={RegisterSchema}
           onSubmit={handleSubmit}
         >
-          {({ isValid, dirty }) => (
+          {({ isValid }) => (
             <Form className="register-form">
               {/* Full Name field here  */}
               <div className="form-group">
@@ -115,14 +123,12 @@ const Register = () => {
               <button
                 type="submit"
                 className="btn btn-primary"
-                disabled={!(isValid && dirty)}
+                disabled={!isValid}
               >
                 Sign Up
               </button>
 
-              <p className="text-center">
-                Already have an account? <Link to="/signin">Sign In</Link>
-              </p>
+              <p className="text-center">Already have an account? Sign In</p>
             </Form>
           )}
         </Formik>

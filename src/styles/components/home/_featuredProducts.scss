@@ -1,8 +1,4 @@
 .featured_product {
-    // background-image: url("../../../public/images/background.png");
-    // background-size: cover;
-    // background-position: center;
-    // background-color: rgb(236, 231, 231);
     padding-top: 30px;
 
     .product_card_container {
@@ -10,8 +6,9 @@
         grid-template-columns: repeat(4, 1fr);
         padding-top: 30px;
         margin: 0 auto;
-        gap: 15px;
+        gap: 2rem;
         padding-bottom: 30px;
+        justify-items: center;
         
 
         @media screen and (max-width: 1200px) {

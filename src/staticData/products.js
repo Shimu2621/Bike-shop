@@ -5,6 +5,8 @@ const products =[
         thumbnail: "/images/bike.png",
         price: 4500,
         ratingCount: 5,
+        category: "Road Bikes",
+        featured: "Aluminum frame",
         reviewsCount: 120,
         discount: {
             discountType: "percent",
@@ -17,6 +19,8 @@ const products =[
         thumbnail: "/images/bike1.png",
         price: 3000,
         ratingCount: 4.5,
+        category: "Road Bikes",
+        featured: "Carbon frame",
         reviewsCount: 120,
         discount: {
             discountType: "percent",
@@ -29,6 +33,8 @@ const products =[
         thumbnail: "/images/bike2.png",
         price: 4000,
         ratingCount: 3,
+        category: "Road Bikes",
+        featured: "Aluminum frame",
         reviewsCount: 120,
         discount: {
             discountType: "flat",
@@ -41,6 +47,8 @@ const products =[
         thumbnail: "/images/bike3.png",
         price: 5500,
         ratingCount: 4.5,
+        category: "Road Bikes",
+        featured: "Carbon frame",
         reviewsCount: 120,
         discount: {
             discountType: "percent",
@@ -53,6 +61,8 @@ const products =[
         thumbnail: "/images/bike3.png",
         price: 3266,
         ratingCount: 3.5,
+        category: "Road Bikes",
+        featured: "Carbon frame",
         reviewsCount: 120,
         discount: {
             discountType: "flat",
@@ -65,6 +75,8 @@ const products =[
         thumbnail: "/images/bike5.png",
         price: 3056,
         ratingCount: 4.5,
+        category: "Road Bikes",
+        featured: "Aluminum frame",
         reviewsCount: 120,
         discount: {
             discountType: "percent",
@@ -77,6 +89,8 @@ const products =[
         thumbnail: "/images/bike6.png",
         price: 2556,
         ratingCount: 4,
+        category: "Road Bikes",
+        featured: "Carbon frame",
         reviewsCount: 120,
         discount: {
             discountType: "percent",
@@ -89,6 +103,8 @@ const products =[
         thumbnail: "/images/bike7.png",
         price: 2970,
         ratingCount: 3.5,
+        category: "Road Bikes",
+        featured: "Aluminum frame",
         reviewsCount: 120,
         discount: {
             discountType: "percent",

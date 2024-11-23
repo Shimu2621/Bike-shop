@@ -1,0 +1,130 @@
+[
+  {
+    "name": "Speedster 2000",
+    "thumbnail": "https://img.freepik.com/premium-photo/bicycle-photo-white-background-detailed-realistic-bike-art-classic-bicycle-white-image_1299314-1827.jpg",
+    "price": 799.99,
+    "ratingCount": 5,
+    "category": "Road Bike",
+    "featured": true
+  },
+  {
+    "name": "Aeroflyer X100",
+    "thumbnail": "https://img.freepik.com/premium-photo/light-blue-bicycle-cycling-activities-isolated-white-background-with-brake-levers_908985-31195.jpg?w=360",
+    "price": 899.99,
+    "ratingCount": 4,
+    "category": "Road Bike",
+    "featured": false
+  },
+  {
+    "name": "Velocity Racer",
+    "thumbnail": "https://img.freepik.com/premium-photo/dutch-blue-bicycle-transparent-background-generative-ai_965649-2007.jpg",
+    "price": 999.99,
+    "ratingCount": 4,
+    "category": "Road Bike",
+    "featured": true
+  },
+  {
+    "name": "Urban Glide",
+    "thumbnail": "https://cdn.pixabay.com/photo/2024/06/06/10/17/ai-generated-8812399_1280.png",
+    "price": 749.99,
+    "ratingCount": 3,
+    "category": "Road Bike",
+    "featured": false
+  },
+  {
+    "name": "Trail Blazer",
+    "thumbnail": "https://www.bike-components.de/assets/p/i/1280x1280f/478764.jpg",
+    "price": 599.99,
+    "ratingCount": 4,
+    "category": "Mountain Bike",
+    "featured": true
+  },
+  {
+    "name": "Summit Seeker",
+    "thumbnail": "https://s.alicdn.com/@sc04/kf/He1c55e79ea944cdf9ace74df8d794f5aL.jpg_720x720q50.jpg",
+    "price": 699.99,
+    "ratingCount": 5,
+    "category": "Mountain Bike",
+    "featured": false
+  },
+  {
+    "name": "Rock Rider",
+    "thumbnail": "https://img.freepik.com/premium-photo/world-bicycle-day-go-green-save-environmentx9_540381-3259.jpg?w=360",
+    "price": 499.99,
+    "ratingCount": 3,
+    "category": "Mountain Bike",
+    "featured": false
+  },
+  {
+    "name": "Mountain King",
+    "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIde3otlS18PHjI_QTyr17UoKniFd0ODytitoNk4lBD7GtTYv05Hiu7hVdVgL0RMKIYDs&usqp=CAU",
+    "price": 799.99,
+    "ratingCount": 4,
+    "category": "Mountain Bike",
+    "featured": true
+  },
+  {
+    "name": "Junior Cruiser",
+    "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFQ8ivKIhVHxb5SD2r66H-XyRChdRFmyRrOg&s",
+    "price": 179.99,
+    "ratingCount": 4,
+    "category": "Kids Bike",
+    "featured": false
+  },
+  {
+    "name": "Tiny Trekker",
+    "thumbnail": "https://img.freepik.com/premium-photo/kids-toy-3d-bicycle-white-background_862994-342191.jpg?w=360",
+    "price": 149.99,
+    "ratingCount": 3,
+    "category": "Kids Bike",
+    "featured": false
+  },
+  {
+    "name": "Mini Adventurer",
+    "thumbnail": "https://img.freepik.com/premium-photo/kids-toy-3d-bicycle-white-background_862994-341574.jpg",
+    "price": 249.99,
+    "ratingCount": 4,
+    "category": "Kids Bike",
+    "featured": true
+  },
+  {
+    "name": "Child's Chariot",
+    "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFQ8ivKIhVHxb5SD2r66H-XyRChdRFmyRrOg&s",
+    "price": 179.99,
+    "ratingCount": 4,
+    "category": "Kids Bike",
+    "featured": false
+  },
+  {
+    "name": "Daisy Dreamer",
+    "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTM9dGYTtoM4DpOpK68ZSE5XDYusm4V2UbfI7gcDkle0S8mU4e79I2ZbD0_MOh1VMMOK4E&usqp=CAU",
+    "price": 299.99,
+    "ratingCount": 4,
+    "category": "Girls Bike",
+    "featured": true
+  },
+  {
+    "name": "Blossom Cruiser",
+    "thumbnail": "https://img.freepik.com/premium-photo/bike-with-basket-flowers-it_853645-14855.jpg",
+    "price": 249.99,
+    "ratingCount": 5,
+    "category": "Girls Bike",
+    "featured": false
+  },
+  {
+    "name": "Flower Flyer",
+    "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFMaz5czxpZjX7Jvg_TD5x46qaWTtHX5NI362HkPBP0K6Hp-nTjbApFLzdrmkFcI1eMGM&usqp=CAU",
+    "price": 349.99,
+    "ratingCount": 4,
+    "category": "Girls Bike",
+    "featured": true
+  },
+  {
+    "name": "Rose Petal Ride",
+    "thumbnail": "https://img.freepik.com/premium-photo/beautiful-journey-red-bicycle-adorned-with-flowers-white-clear-surface-png-transparent-background_94628-57173.jpg",
+    "price": 279.99,
+    "ratingCount": 3,
+    "category": "Girls Bike",
+    "featured": false
+  }
+]

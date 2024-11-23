@@ -1,11 +1,21 @@
-import React, { useEffect } from "react";
-import products from "../../staticData/products";
+import React, { useEffect, useState } from "react";
 
 import Aos from "aos";
 import "aos/dist/aos.css";
 import ProductCard from "../home/ProductCard";
+import axios from "axios";
 
 const ProductPage = () => {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await axios.get("http://localhost:5000/products");
+      setProducts(response.data.data);
+    };
+    fetchData();
+  }, []);
+
   useEffect(() => {
     Aos.init();
   }, []);
@@ -17,17 +27,17 @@ const ProductPage = () => {
           data-aos="fade-up"
           data-aos-duration="1000"
         >
-          <h2 className="home_section_title">Our Brands</h2>
+          <h2 className="home_section_title">Our Product Collection</h2>
           <p className="section_title_text">
             Each of us has our own challenges, goals and reasons to ride.
             <br />
-            Our brands are here to help you achieve your goals!
+            Our products are here to help you achieve your goals!
           </p>
 
           <div className="product_card_container">
             {products?.map((product, index) => (
               <div
-                key={product.id}
+                key={product._id}
                 data-aos="fade-up"
                 data-aos-delay={`${index * 100}`} // Use `index` for a staggered effect
               >

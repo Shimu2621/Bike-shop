@@ -1,0 +1,153 @@
+// Variables for colors
+$primary-color: #ed5544;
+$error-color: #e74c3c;
+$background-color: #f9f9f9;
+$form-bg-color: #ffffff;
+
+
+.product_form {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+
+h2 {
+        background-image: linear-gradient(45deg, $dark-btn, $light-btn);
+        background-clip: text;
+        color: transparent;
+        font-size: 30px;
+        padding-bottom: 8px;
+        padding-top: 40px;
+        text-align: center;
+        font-weight: 700;
+      }
+
+// Container for the form sections
+.product_form_container {
+  display: flex;
+  background-color: $form-bg-color;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+// Left section with animation
+.product_form_left {
+  flex: 1;
+  background-color: $dark_orange;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+// Lottie animation styles
+.lottie-animation {
+  max-width: 300px;
+  height: auto;
+}
+
+// Right section with the form
+.product_form_right {
+  flex: 1;
+  padding: 2rem;
+}
+
+// Form styles
+.product-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    // margin-bottom: 20px;
+    // align-items: center;
+
+    label {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: $text-gray;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    .featured-switch {
+      display: flex;
+      align-items: center;
+      justify-content: space-between; // Ensures the label and checkbox align vertically
+      gap: 0.5rem; // Adds space between the label and checkbox
+    }
+
+    .switch {
+      // margin: 0;
+      // padding: 0;
+      height: 1.2rem; // Adjust height to visually match the label
+      width: 1.2rem; 
+      // line-height: 1.5;
+      // margin-left: 10px; 
+      cursor: pointer;    
+    }
+
+    input,
+    textarea,
+    select {
+      padding: 0.8rem;
+      font-size: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      background-color: $background-color;
+
+      &:focus {
+        border-color: $primary-color;
+        outline: none;
+      }
+    }
+
+    // Styles for error messages
+    .error {
+      font-size: 0.85rem;
+      color: $error-color;
+      margin-top: 0.3rem;
+    }
+  }
+}
+
+// Submit button styles
+.submit-button {
+    // margin-top: 30px;
+    // padding: 10px 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white; // Text color
+    background: linear-gradient(45deg, $dark-btn, $light-btn); // Gradient from coral to dodger blue
+    transition: background 0.3s ease;
+
+    &:hover {
+      background: linear-gradient(45deg, $light-btn, $dark-btn); // Reverse gradient on hover
+    }
+  &:disabled {
+    background-color: #bbb;
+    cursor: not-allowed;
+  }
+}
+
+// Media queries for responsiveness
+@media screen and (max-width: 768px) {
+  .service_form_container {
+    flex-direction: column;
+  }
+
+  .service_from_left {
+    padding: 1.5rem;
+  }
+
+  .service_form_right {
+    padding: 1.5rem;
+  }
+}

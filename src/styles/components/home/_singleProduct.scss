@@ -1,0 +1,86 @@
+.single_product {
+    display: flex;
+    align-items: flex-start;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    margin: 0 auto;
+    gap: 30px; // Space between the image and the details
+  
+    .product_thumbnail {
+      flex: 1;
+      max-width: 100%;
+  
+      img {
+        width: 500px;
+        height: 500px;
+        object-fit: contain;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+    }
+  
+    .product_details {
+      flex: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      
+
+     .single_page_header h2 {
+      background-image: linear-gradient(45deg, $dark-btn, $light-btn);
+      background-clip: text;
+      color: transparent;
+      font-size: 30px;
+      padding-bottom: 8px;
+      padding-top: 25px;
+      text-align: center;
+      font-weight: 900;
+     }
+  
+      h1 {
+        font-size: 1.5rem;
+        text-align: justify;
+        font-weight: 700;
+        background-image: linear-gradient(45deg, $dark-btn, $light-btn);
+        background-clip: text;
+        color: transparent;
+        margin-bottom: 10px;
+      }
+  
+      p {
+        font-size: 1.2rem;
+        color: #201919;
+      }
+  
+      .rating {
+        margin: 10px 0;
+  
+        .ant-rate-star {
+          margin-right: 5px;
+          color: #ffd700; // Gold color for the stars
+        }
+      }
+  
+      button {
+        padding: 10px 20px;
+        margin-top: 30px;
+        padding: 10px 20px;
+        font-size: 1rem;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        color: white; // Text color
+        background: linear-gradient(45deg, $dark-btn, $light-btn); // Gradient from coral to dodger blue
+        transition: background 0.3s ease;
+    
+        &:hover {
+          background: linear-gradient(45deg, $light-btn, $dark-btn); // Reverse gradient on hover
+        }
+      }
+    }
+  }
+  
+  

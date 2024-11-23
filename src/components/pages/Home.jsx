@@ -8,6 +8,7 @@ import TopBrands from "../home/TopBrands";
 import ChooseUs from "../home/ChooseUs";
 import FeaturedServices from "../home/FeaturedServices";
 import OurGallery from "../home/OurGallery";
+import ServiceCard from "../home/ServiceCard";
 
 const Home = () => {
   return (
@@ -17,8 +18,9 @@ const Home = () => {
       <FeaturedProducts />
       <ChooseUs />
       <OurGallery />
-      <TopCategories />
       <FeaturedServices />
+      <ServiceCard />
+      <TopCategories />
       <TopBrands />
       <Reviews />
     </div>

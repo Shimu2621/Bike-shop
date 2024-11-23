@@ -73,6 +73,26 @@
 .text_primary {
     color: $primary_color;
 }
+// Submit button styles
+.submit-button {
+    margin-top: 30px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white; // Text color
+    background: linear-gradient(45deg, $dark-btn, $light-btn); // Gradient from coral to dodger blue
+    transition: background 0.3s ease;
+
+    &:hover {
+      background: linear-gradient(45deg, $light-btn, $dark-btn); // Reverse gradient on hover
+    }
+  &:disabled {
+    background-color: #bbb;
+    cursor: not-allowed;
+  }
+}
 
 .primary_btn {
     border: none;

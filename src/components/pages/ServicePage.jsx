@@ -9,6 +9,9 @@ import team from "../../../public/images/team.png";
 import team1 from "../../../public/images/team1.png";
 import team2 from "../../../public/images/team2.png";
 import { useEffect } from "react";
+import ChooseUs from "../home/ChooseUs";
+import FeaturedServices from "../home/FeaturedServices";
+import ServiceCard from "../home/ServiceCard";
 
 const ServicePage = () => {
   // Initialize AOS
@@ -95,7 +98,12 @@ const ServicePage = () => {
             </div>
           </div>
 
-          <div className="service_section_footer" data-aos="fade-up">
+          <ServiceCard />
+
+          <FeaturedServices />
+
+          {/* Our team member section */}
+          {/* <div className="service_section_footer" data-aos="fade-up">
             <div className="footer_header">
               <h2>OUR TEAM MEMBER</h2>
               <p>
@@ -122,7 +130,7 @@ const ServicePage = () => {
                 <h3>Frank Gorden</h3>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

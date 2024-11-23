@@ -2,22 +2,20 @@ import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { Input, Button, Divider } from "antd";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import signinanimation from "../../../public/signin.json";
 import Lottie from "lottie-react";
+import axios from "axios";
+import toast from "react-hot-toast";
 
 // Yup validation schema for Signup
 const SigninSchema = Yup.object().shape({
-  fullName: Yup.string()
-    .min(3, "Full Name must be at least 3 characters")
-    .required("Please enter your full name!"),
-  imageUrl: Yup.string().url("Invalid URL format"),
   email: Yup.string()
     .email("Invalid email address")
     .required("Please input your email!"),
   password: Yup.string()
     .min(8, "Password must be at least 8 characters")
-    .matches(/[A-Z]/, "Password must contain at least one uppercase letter")
+    // .matches(/[A-Z]/, "Password must contain at least one uppercase letter")
     .matches(/[a-z]/, "Password must contain at least one lowercase letter")
     .matches(/[0-9]/, "Password must contain at least one number")
     .matches(
@@ -28,15 +26,29 @@ const SigninSchema = Yup.object().shape({
 });
 
 const Signin = () => {
+  const navigate = useNavigate();
   const handleSubmit = (values) => {
     // Handle form submission
     console.log("Signup Form Data:", values);
     // alert("Signin Successful!");
     const user = {
-      email,
-      password,
+      email: values.email,
+      password: values.password,
     };
     console.log(user);
+
+    axios
+      .post("http://localhost:5000/signin", user)
+      .then((response) => {
+        console.log("Response", response.data.data);
+        localStorage.setItem("user", JSON.stringify(response.data.data));
+        toast.success("You Logged In Successfully");
+        navigate("/");
+      })
+      .catch((error) => {
+        console.log("Error:", error);
+        toast.error("Logged In Failed");
+      });
   };
 
   return (
@@ -55,15 +67,13 @@ const Signin = () => {
         <h3>Sign In</h3>
         <Formik
           initialValues={{
-            fullName: "",
-            imageUrl: "",
             email: "",
             password: "",
           }}
           validationSchema={SigninSchema}
           onSubmit={handleSubmit}
         >
-          {({ isValid, dirty }) => (
+          {({ isValid }) => (
             <Form className="signin-form">
               {/* Email field here */}
               <div className="form-group">
@@ -90,7 +100,7 @@ const Signin = () => {
               <button
                 type="submit"
                 className="btn btn-primary"
-                disabled={!(isValid && dirty)}
+                disabled={!isValid}
               >
                 Sign In
               </button>
