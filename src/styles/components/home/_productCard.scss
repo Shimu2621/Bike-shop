@@ -5,13 +5,10 @@
   overflow: hidden;
   text-align: center;
   padding: 1rem;
-  transition: transform 0.3s;
-  // width: 100%;
-  // max-width: 250px; 
-  max-width: 300px;// Keeps all cards the same width
-  height: 400px; // Keeps all cards the same height
+  transition: transform 0.3s ease;
+  max-width: 300px; // Keeps all cards the same width
+  height: 420px; // Keeps all cards the same height
   display: flex;
-  text-align: center;
   flex-direction: column;
   justify-content: space-between;
 
@@ -21,70 +18,118 @@
 
   .product_img {
     width: 100%;
-    height: 220px; // Consistent image container height
+    height: 220px; 
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 10px;
-    // object-fit: cover;
-    
+
     img {
       width: 100%;
       height: 100%;
       object-fit: contain;
-      // object-fit: cover; // Ensures consistent image dimensions
     }
   }
+
   .product_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+    gap: 0.5rem;
+
     .product_name {
-      font-size: 1.1rem !important;
-      font-weight: bold !important;
-      margin-bottom: 0.5rem !important;
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
     }
 
-    // .rating {
-    //   margin: 0.5rem 0;
-    // }
     .product_details {
       display: flex;
       justify-content: space-between;
-      align-items: center; // Center aligns the items vertically
-      margin-bottom: 30px;
-    
-      .product_category, .price {
+      align-items: center;
+      margin-bottom: 1rem;
+
+      .product_category,
+      .price {
         color: #161313;
         font-size: 1rem;
-        line-height: 1.5; // Ensures consistent line height
-        margin: 0; // Removes any default margins that could affect alignment
-        padding: 0; // Removes any padding that could shift alignment
+        font-weight: 500;
+        margin: 0;
+        padding: 0;
       }
-    
+
       .product_category {
-        flex: 1;
         text-align: left;
-        font-weight: 700;
       }
-    
+
       .price {
-        flex: 1;
-        font-weight: 700;
         text-align: right;
       }
     }
-    
+
     .btn {
-      padding: 8px 8px;
-      font-size: 12px;
+      margin-top: auto; // Pushes the button to the bottom
+      padding: 10px 15px;
+      font-size: 14px;
       border: none;
       border-radius: 5px;
       cursor: pointer;
-      color: white; // Text color
-      background: linear-gradient(45deg, $dark-btn, $light-btn); // Gradient from coral to dodger blue
+      color: white;
+      background: linear-gradient(45deg, $dark-btn, $light-btn); 
       transition: background 0.3s ease;
-  
+
       &:hover {
-        background: linear-gradient(45deg, $light-btn, $dark-btn); // Reverse gradient on hover
+        background: linear-gradient(45deg, $light-btn, $dark-btn); 
       }
+    }
+  }
+
+  // Media Queries for Responsiveness
+  @media (max-width: 1200px) {
+    max-width: 250px; // for medium screens
+    height: 380px; // for better fit on smaller screens
+  }
+
+  @media (max-width: 1024px) {
+    max-width: 220px; // Smaller width for tablets
+    height: 360px; // Adjust height for better fit on tablets
+  }
+
+  @media (max-width: 768px) {
+    max-width: 200px;
+    height: 350px; 
+
+    .product_name {
+      font-size: 1rem; 
+    }
+
+    .product_details {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .price {
+      margin-top: 10px;
+    }
+
+    .btn {
+      font-size: 12px; 
+      padding: 8px 12px; 
+    }
+  }
+
+  @media (max-width: 480px) {
+    max-width: 180px; 
+    height: 330px; 
+
+    .product_name {
+      font-size: 0.9rem; 
+    }
+
+    .btn {
+      font-size: 10px; 
+      padding: 6px 10px; 
     }
   }
 }

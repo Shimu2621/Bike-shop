@@ -34,10 +34,19 @@ const Register = () => {
 
   const handleSubmit = (values) => {
     // Handle form submission
-    console.log("Signup Form Data:", values);
+    // console.log("Signup Form Data:", values);
     // alert("Signup Successful!");
+    const newUser = {
+      fullName: values.fullName,
+      imageUrl: values.imageUrl,
+      email: values.email,
+      password: values.password,
+      role: "user",
+    };
+    console.log(newUser);
+
     axios
-      .post("http://localhost:5000/signup", values)
+      .post("http://localhost:5000/signup", newUser)
       .then((response) => {
         console.log("Response", response.data);
         if (response.data.data.acknowledged) {
@@ -128,7 +137,9 @@ const Register = () => {
                 Sign Up
               </button>
 
-              <p className="text-center">Already have an account? Sign In</p>
+              <p className="text-center">
+                Already have an account? <Link to="/signin">Sign In</Link>
+              </p>
             </Form>
           )}
         </Formik>

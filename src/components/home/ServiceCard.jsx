@@ -60,7 +60,7 @@ const ServiceCard = () => {
             </div>
             <div className="service_section">
               <h2>{service.title}</h2>
-              <h3>${service.price}</h3>
+              <h3>Price: ${service.price}</h3>
               <p>{service.description}</p>
               <Link to={`/services/${service._id}`}>
                 <button>View Details</button>

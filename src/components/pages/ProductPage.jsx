@@ -19,6 +19,10 @@ const ProductPage = () => {
   useEffect(() => {
     Aos.init();
   }, []);
+
+  // Limit products to 8
+  // const limitedProducts = products.slice(0, 8);
+
   return (
     <>
       {products.length !== 0 ? (

@@ -18,11 +18,19 @@ import SingleProduct from "./components/home/SingleProduct.jsx";
 import CreateProduct from "./components/admin/CreateProduct.jsx";
 import CreateService from "./components/admin/CreateService.jsx";
 import UpdateProduct from "./components/admin/UpdateProduct.jsx";
+import AdminDashboard from "./components/admin/AdminDashboard.jsx";
+import UpdateService from "./components/admin/UpdateService.jsx";
+import ProductInventory from "./components/admin/ProductInventory.jsx";
+import ServiceInventory from "./components/admin/ServiceInventory.jsx";
+import CartPage from "./components/user/CartPage.jsx";
+import ErrorPage from "./components/home/ErrorPage.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout />,
+    errorElement: <ErrorPage />,
+
     children: [
       {
         path: "/",
@@ -55,12 +63,21 @@ const router = createBrowserRouter([
     ],
   },
   {
+    path: "/cart",
+    element: <CartPage />,
+  },
+
+  {
     path: "signup",
     element: <Signup />,
   },
   {
     path: "signin",
     element: <Signin />,
+  },
+  {
+    path: "admin-dashboard",
+    element: <AdminDashboard />,
   },
   {
     path: "/create-product",
@@ -73,6 +90,18 @@ const router = createBrowserRouter([
   {
     path: "/update-product/:id",
     element: <UpdateProduct />,
+  },
+  {
+    path: "/update-service/:id",
+    element: <UpdateService />,
+  },
+  {
+    path: "/product-inventory",
+    element: <ProductInventory />,
+  },
+  {
+    path: "/service-inventory",
+    element: <ServiceInventory />,
   },
 ]);
 

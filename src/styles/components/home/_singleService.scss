@@ -11,7 +11,7 @@
   .single_service_img {
     flex: 1;
     margin-right: 2rem;
-    
+
     img {
       width: 100%;
       max-width: 500px;
@@ -19,7 +19,7 @@
       border-radius: 8px;
       object-fit: cover;
       transition: transform 0.3s ease;
-      
+
       &:hover {
         transform: scale(1.05);
       }
@@ -68,33 +68,120 @@
       color: white; // Text color
       background: linear-gradient(45deg, $dark-btn, $light-btn); // Gradient from coral to dodger blue
       transition: background 0.3s ease;
-  
+
       &:hover {
         background: linear-gradient(45deg, $light-btn, $dark-btn); // Reverse gradient on hover
       }
-      // &:active {
-      //   background-color: #219150;
-      // }
-    
     }
   }
-}
 
-@media (max-width: 768px) {
-  .single_service_details {
+  // Media Queries for Responsiveness
+  @media (max-width: 1200px) {
     flex-direction: column;
-    padding: 1rem;
-    
+    margin: 2rem;
+    padding: 2rem;
+
     .single_service_img {
       margin-right: 0;
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
+
       img {
-        max-width: 100%;
+        max-width: 400px;
+        height: auto;
       }
     }
 
     .single_service_content {
-      text-align: center;
+      h2 {
+        font-size: 2rem;
+      }
+
+      h3 {
+        font-size: 1.4rem;
+      }
+
+      h4 {
+        font-size: 20px;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+
+      button {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 1.5rem;
+    margin: 1.5rem;
+
+    .single_service_img {
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+
+    .single_service_content {
+      h2 {
+        font-size: 1.8rem;
+      }
+
+      h3 {
+        font-size: 1.2rem;
+      }
+
+      h4 {
+        font-size: 18px;
+      }
+
+      p {
+        font-size: 0.9rem;
+      }
+
+      button {
+        padding: 6px 12px;
+        font-size: 0.9rem;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 1rem;
+    margin: 1rem;
+
+    .single_service_img {
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+
+    .single_service_content {
+      h2 {
+        font-size: 1.6rem;
+      }
+
+      h3 {
+        font-size: 1rem;
+      }
+
+      h4 {
+        font-size: 16px;
+      }
+
+      p {
+        font-size: 0.8rem;
+      }
+
+      button {
+        padding: 5px 10px;
+        font-size: 0.8rem;
+      }
     }
   }
 }

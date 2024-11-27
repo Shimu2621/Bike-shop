@@ -3,7 +3,7 @@ import * as Yup from "yup";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import signupanimation from "../../../public/signin.json";
 import Lottie from "lottie-react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import toast from "react-hot-toast";
 
@@ -28,6 +28,7 @@ const ProductSchema = Yup.object().shape({
 const UpdateProduct = () => {
   const { id } = useParams();
   const [product, setProduct] = useState();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchProduct = async () => {
@@ -47,7 +48,7 @@ const UpdateProduct = () => {
   if (!product) {
     return <div>Loading...</div>; // Or a custom loading spinner/message
   }
-  // console.log(product);
+  const { name, thumbnail, price, ratingCount, featured, category } = product;
 
   // Handle form submission
   const handleSubmit = (values) => {
@@ -57,6 +58,7 @@ const UpdateProduct = () => {
       .then((response) => {
         console.log(response.data);
         if (response.data.data.acknowledged) {
+          navigate("/product-inventory");
           toast.success("Product Updated successfully!");
         }
       })
@@ -81,17 +83,17 @@ const UpdateProduct = () => {
         <div className="product_form_right">
           <Formik
             initialValues={{
-              name: "",
-              thumbnail: "",
-              price: "",
-              ratingCount: "",
-              category: "",
-              featured: false,
+              name: name,
+              thumbnail: thumbnail,
+              price: price,
+              ratingCount: ratingCount,
+              category: category,
+              featured: featured,
             }}
             validationSchema={ProductSchema}
             onSubmit={handleSubmit}
           >
-            {({ isSubmitting, setFieldValue }) => (
+            {({ setFieldValue }) => (
               <Form className="product-form">
                 {/* name */}
                 <div className="form-group">
@@ -169,12 +171,8 @@ const UpdateProduct = () => {
                   />
                 </div>
 
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="submit-button"
-                >
-                  {isSubmitting ? "Submitting..." : "Update product"}
+                <button type="submit" className="submit-button">
+                  Update product
                 </button>
               </Form>
             )}

@@ -67,7 +67,7 @@ const CreateProduct = () => {
             validationSchema={ProductSchema}
             onSubmit={handleSubmit}
           >
-            {({ isSubmitting, setFieldValue }) => (
+            {({ setFieldValue }) => (
               <Form className="product-form">
                 {/* name */}
                 <div className="form-group">
@@ -145,12 +145,8 @@ const CreateProduct = () => {
                   />
                 </div>
 
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="submit-button"
-                >
-                  {isSubmitting ? "Submitting..." : "Create Product"}
+                <button type="submit" className="submit-button">
+                  Create Product
                 </button>
               </Form>
             )}

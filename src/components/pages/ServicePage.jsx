@@ -35,11 +35,7 @@ const ServicePage = () => {
         </div>
 
         <div className="service_wrapper">
-          <div className="service_header" data-aos="fade-right">
-            <h1>One Stop Solution For Bikes</h1>
-          </div>
-
-          <div className="service_section_top" data-aos="fade-up">
+          {/* <div className="service_section_top" data-aos="fade-up">
             <div className="section_img">
               <img src={service} alt="service" />
             </div>
@@ -67,6 +63,12 @@ const ServicePage = () => {
                 </p>
               </div>
             </div>
+          </div> */}
+
+          <ServiceCard />
+
+          <div className="service_header" data-aos="fade-right">
+            <h1>One Stop Solution For Bikes</h1>
           </div>
 
           <div className="service_section_bottom" data-aos="fade-up">
@@ -97,40 +99,7 @@ const ServicePage = () => {
               <img width={700} height={480} src={service1} alt="service" />
             </div>
           </div>
-
-          <ServiceCard />
-
-          <FeaturedServices />
-
-          {/* Our team member section */}
-          {/* <div className="service_section_footer" data-aos="fade-up">
-            <div className="footer_header">
-              <h2>OUR TEAM MEMBER</h2>
-              <p>
-                We’ll be happy to share our repair recommendations, give you an
-                estimate <br /> on the pricing, and share how long the repair
-                may take.
-              </p>
-            </div>
-
-            <div className="footer_wrapper">
-              <div className="footer_list" data-aos="fade-right">
-                <img src={team} alt="team" />
-                <h4>Co-Founder</h4>
-                <h3>Biance Wood</h3>
-              </div>
-              <div className="footer_list" data-aos="fade-up">
-                <img src={team2} alt="team" />
-                <h4>Assistant-Manager</h4>
-                <h3>Steven Victoria</h3>
-              </div>
-              <div className="footer_list" data-aos="fade-left">
-                <img src={team1} alt="team" />
-                <h4>Sale Manager</h4>
-                <h3>Frank Gorden</h3>
-              </div>
-            </div>
-          </div> */}
+          {/* <FeaturedServices /> */}
         </div>
       </div>
     </div>

@@ -7,9 +7,11 @@ import { HiMiniBars3CenterLeft } from "react-icons/hi2";
 import { FaRegUser } from "react-icons/fa";
 //external imports
 import { Dropdown } from "antd";
+import axios from "axios";
 
 const Navbar = () => {
   const [user, setUser] = useState();
+  const [cartCount, setCartCount] = useState(0); //stores the number of items in the user's cart.
 
   useEffect(() => {
     const itemFromLocalStorage = localStorage.getItem("user");
@@ -24,9 +26,29 @@ const Navbar = () => {
     } else {
       console.log("Item not found in local storage");
     }
-  }, [user]);
+  }, []);
   // console.log(user);
 
+  useEffect(() => {
+    // Fetch cart count if user is logged in
+    const fetchCartCount = async () => {
+      //If the user is logged in, it triggers an API call  to fetch the number of items in the user's cart.
+      if (user?.email) {
+        try {
+          const response = await axios.get(
+            `http://localhost:5000/order-list?email=${user?.email}`
+          ); // it fetches the user's cart items based on their email
+          setCartCount(response.data.data.length); // Set the cart item count
+        } catch (error) {
+          console.error("Error fetching cart count:", error);
+        }
+      }
+    };
+    fetchCartCount();
+  }, [user?.email]);
+  console.log(cartCount);
+
+  //  handleLogOut function clears the user data from localStorage and resets the user state, logging the user out
   const handleLogOut = () => {
     localStorage.removeItem("user");
     setUser("");
@@ -85,28 +107,50 @@ const Navbar = () => {
               <Link to="/products">Products</Link>
             </li>
             <li>
-              <Link to="/contact-us">Contact Us</Link>
+              <Link to="/services">Services</Link>
             </li>
             <li>
-              <Link to="/services">Services</Link>
+              <Link to="/contact-us">Contact Us</Link>
             </li>
             <li>
               <Link to="/about-us">About Us</Link>
             </li>
-            <li>
-              <Link to="/">
+            {/* Dashboard link */}
+            {user && user.role === "admin" ? (
+              <li>
+                <Link to="/admin-dashboard">Dashboard</Link>
+              </li>
+            ) : (
+              " "
+            )}
+            {/* Cart icon link */}
+            {/* If there are items in the cart, it shows the count next to the icon */}
+            <li className="cart_icon">
+              <Link to="/cart">
                 <RiShoppingBagLine size={23} />
+                {cartCount > 0 && (
+                  <span className="cart_count">{cartCount}</span>
+                )}
               </Link>
             </li>
+            {/* User link */}
+            {/* If the user is logged in, it displays the user's profile picture and name along with a "Log Out" button */}
             {user && user.imageUrl ? (
-              <div>
-                <img src={user.imageUrl} alt={user.fullName} />
-                <h4>{user.fullName}</h4>
+              <div className="user">
+                <div className="user_info">
+                  <img
+                    className="user_img"
+                    src={user.imageUrl}
+                    alt={user.fullName}
+                  />
+                  <h4 className="user_name">{user.fullName}</h4>
+                </div>
                 <button className="btn" onClick={handleLogOut}>
                   Log Out
                 </button>
               </div>
             ) : (
+              // If the user is not logged in, it shows a "Sign Up"
               <li>
                 <Link to="/signup">
                   <FaRegUser size={20} />

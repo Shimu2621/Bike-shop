@@ -80,8 +80,8 @@ const Footer = () => {
 
       <div
         className="footer-icon container"
-        data-aos="fade-up"
-        data-aos-delay="800"
+        // data-aos="fade-up"
+        // data-aos-delay="800"
       >
         <div className="footer-ico">
           <h4>Follow us</h4>
@@ -106,8 +106,8 @@ const Footer = () => {
 
         <div
           className="logo-section container"
-          data-aos="fade-up"
-          data-aos-delay="1000"
+          // data-aos="fade-up"
+          // data-aos-delay="1000"
         >
           <div className="all-image">
             <h4>Payment Method</h4>
