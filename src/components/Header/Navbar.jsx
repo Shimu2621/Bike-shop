@@ -36,7 +36,7 @@ const Navbar = () => {
       if (user?.email) {
         try {
           const response = await axios.get(
-            `http://localhost:5000/order-list?email=${user?.email}`
+            `https://bike-shop-server-omega.vercel.app/order-list?email=${user?.email}`
           ); // it fetches the user's cart items based on their email
           setCartCount(response.data.data.length); // Set the cart item count
         } catch (error) {

@@ -12,7 +12,7 @@ const TopBrands = () => {
   return (
     <Marquee className="brands_list">
       <div style={{ padding: "0 30px" }}>
-        <img height={100} width={220} src={trek} alt="trek" />
+        <img height={600} width={220} src={trek} alt="trek" />
       </div>
       <div style={{ padding: "0 30px" }}>
         <img height={150} width={220} src={cannondale} alt="cannondale" />

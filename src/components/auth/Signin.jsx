@@ -38,7 +38,7 @@ const Signin = () => {
     console.log(user);
 
     axios
-      .post("http://localhost:5000/signin", user)
+      .post("https://bike-shop-server-omega.vercel.app/signin", user)
       .then((response) => {
         console.log("Response", response.data.data);
         localStorage.setItem("user", JSON.stringify(response.data.data));

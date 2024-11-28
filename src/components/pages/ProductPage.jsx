@@ -10,7 +10,9 @@ const ProductPage = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await axios.get("http://localhost:5000/products");
+      const response = await axios.get(
+        "https://bike-shop-server-omega.vercel.app/products"
+      );
       setProducts(response.data.data);
     };
     fetchData();

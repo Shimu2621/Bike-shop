@@ -20,7 +20,7 @@ const CartPage = () => {
       const fetchCartItems = async () => {
         try {
           const response = await axios.get(
-            `http://localhost:5000/order-list?email=${userEmail}`
+            `https://bike-shop-server-omega.vercel.app/order-list?email=${userEmail}`
           );
           setCartItems(response.data.data);
           setLoading(false); // Stop loading once cart items are fetched
@@ -39,7 +39,7 @@ const CartPage = () => {
 
   const handleRemoveFromCart = (id) => {
     axios
-      .delete(`http://localhost:5000/order-list/${id}`)
+      .delete(`https://bike-shop-server-omega.vercel.app/order-list/${id}`)
       .then((response) => {
         console.log(response);
         // Optionally, re-fetch cart items or update the state to reflect the change

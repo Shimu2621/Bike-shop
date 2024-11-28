@@ -10,7 +10,9 @@ const ServiceInventory = () => {
   useEffect(() => {
     const fetchServices = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/services");
+        const response = await axios.get(
+          "https://bike-shop-server-omega.vercel.app/services"
+        );
         // console.log(response.data);
         setServices(response.data.data);
         setLoading(false);
@@ -25,7 +27,7 @@ const ServiceInventory = () => {
   const handleDelete = (id) => {
     console.log(id);
     axios
-      .delete(`http://localhost:5000/services/${id}`)
+      .delete(`https://bike-shop-server-omega.vercel.app/services/${id}`)
       .then((response) => {
         console.log(response.data);
         if (response.data.data.deletedCount === 1) {

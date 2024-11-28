@@ -1,0 +1,26 @@
+// .brands_list {
+//     display: flex;
+//     align-items: center;
+//     border: 1px solid whitesmoke;
+//     background-color: rgb(149, 83, 83);
+  
+//     div {
+//       padding: 0 30px;
+//       border: 1px solid whitesmoke;
+//     background-color: rgb(149, 83, 83);
+  
+//       img {
+//         height: auto;
+//         width: 220px;
+//         max-height: 150px; /* Adjust this value for uniform height */
+//         object-fit: contain; /* Ensures the image fits nicely */
+//         transition: transform 0.3s ease;
+//         background-color: #F8F9FA;
+  
+//         &:hover {
+//           transform: scale(1.1); /* Adds a hover effect */
+//         }
+//       }
+//     }
+//   }
+  

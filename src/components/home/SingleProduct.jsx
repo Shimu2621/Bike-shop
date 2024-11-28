@@ -19,7 +19,7 @@ const SingleProduct = () => {
   useEffect(() => {
     const fetchProduct = async () => {
       axios
-        .get(`http://localhost:5000/products/${id}`)
+        .get(`https://bike-shop-server-omega.vercel.app/products/${id}`)
         .then((response) => {
           setProduct(response.data.data || response.data);
         })
@@ -45,7 +45,7 @@ const SingleProduct = () => {
     };
     console.log(cartItem);
     axios
-      .post("http://localhost:5000/create-order", cartItem)
+      .post("https://bike-shop-server-omega.vercel.app/create-order", cartItem)
       .then((response) => {
         console.log(response);
         setProduct(response.data.data.acknowledged);

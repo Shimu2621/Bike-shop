@@ -33,7 +33,7 @@ const UpdateProduct = () => {
   useEffect(() => {
     const fetchProduct = async () => {
       axios
-        .get(`http://localhost:5000/products/${id}`)
+        .get(`https://bike-shop-server-omega.vercel.app/products/${id}`)
         .then((response) => {
           setProduct(response.data.data || response.data);
         })
@@ -54,7 +54,10 @@ const UpdateProduct = () => {
   const handleSubmit = (values) => {
     console.log(values);
     axios
-      .put(`http://localhost:5000/update-product/${id}`, values)
+      .put(
+        `https://bike-shop-server-omega.vercel.app/update-product/${id}`,
+        values
+      )
       .then((response) => {
         console.log(response.data);
         if (response.data.data.acknowledged) {

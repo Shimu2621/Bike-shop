@@ -18,7 +18,7 @@ const SingleService = () => {
   useEffect(() => {
     const fetchService = async () => {
       axios
-        .get(`http://localhost:5000/services/${id}`)
+        .get(`https://bike-shop-server-omega.vercel.app/services/${id}`)
         .then((response) => {
           setService(response.data.data || response.data);
         })
@@ -44,7 +44,7 @@ const SingleService = () => {
       email: userEmail,
     };
     axios
-      .post("http://localhost:5000/create-order", cartItem)
+      .post("https://bike-shop-server-omega.vercel.app/create-order", cartItem)
       .then((response) => {
         console.log(response.data);
         navigate("/cart");

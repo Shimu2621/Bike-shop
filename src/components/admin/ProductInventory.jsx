@@ -10,7 +10,9 @@ const ProductInventory = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/products");
+        const response = await axios.get(
+          "https://bike-shop-server-omega.vercel.app/products"
+        );
         setProducts(response.data.data);
         setLoading(false);
       } catch (error) {
@@ -24,7 +26,7 @@ const ProductInventory = () => {
   const handleDelete = (id) => {
     console.log(id);
     axios
-      .delete(`http://localhost:5000/products/${id}`)
+      .delete(`https://bike-shop-server-omega.vercel.app/products/${id}`)
       .then((response) => {
         console.log(response);
         if (response.data.data.deletedCount === 1) {

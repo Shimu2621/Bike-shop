@@ -46,7 +46,7 @@ const Register = () => {
     console.log(newUser);
 
     axios
-      .post("http://localhost:5000/signup", newUser)
+      .post("https://bike-shop-server-omega.vercel.app/signup", newUser)
       .then((response) => {
         console.log("Response", response.data);
         if (response.data.data.acknowledged) {

@@ -24,7 +24,7 @@ const CreateService = () => {
     console.log("service Created", values);
 
     axios
-      .post("http://localhost:5000/create-service", values)
+      .post("https://bike-shop-server-omega.vercel.app/create-service", values)
       .then((response) => {
         console.log("Response", response.data);
         if (response.data || response.data.acknowledged) {

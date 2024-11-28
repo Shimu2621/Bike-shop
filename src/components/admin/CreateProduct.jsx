@@ -29,7 +29,7 @@ const CreateProduct = () => {
     console.log("Product Created", values);
 
     axios
-      .post("http://localhost:5000/create-product", values)
+      .post("https://bike-shop-server-omega.vercel.app/create-product", values)
       .then((response) => {
         console.log("Response", response.data);
         if (response.data || response.data.acknowledged) {

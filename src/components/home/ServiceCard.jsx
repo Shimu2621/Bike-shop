@@ -15,7 +15,7 @@ const ServiceCard = () => {
   useEffect(() => {
     const fetchServices = () => {
       axios
-        .get("http://localhost:5000/services")
+        .get("https://bike-shop-server-omega.vercel.app/services")
         .then((response) => {
           //   console.log(response.data.data);
           setServices(response.data.data);

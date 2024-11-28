@@ -28,7 +28,7 @@ const UpdateService = () => {
   useEffect(() => {
     const fetchService = async () => {
       axios
-        .get(`http://localhost:5000/services/${id}`)
+        .get(`https://bike-shop-server-omega.vercel.app/services/${id}`)
         .then((response) => {
           //   console.log(response.data);
           setService(response.data.data);
@@ -49,7 +49,10 @@ const UpdateService = () => {
   const handleSubmit = (values) => {
     console.log(values);
     axios
-      .put(`http://localhost:5000/update-service/${id}`, values)
+      .put(
+        `https://bike-shop-server-omega.vercel.app/update-service/${id}`,
+        values
+      )
       .then((response) => {
         console.log(response.data);
         if (response.data.data.acknowledged) {
