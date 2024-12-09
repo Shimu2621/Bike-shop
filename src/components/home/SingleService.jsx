@@ -39,7 +39,7 @@ const SingleService = () => {
     const cartItem = {
       productId: service._id,
       name: service.title,
-      thumbnail: service.image,
+      thumbnail: service.thumbnail,
       price: service.price,
       email: userEmail,
     };
@@ -59,7 +59,7 @@ const SingleService = () => {
   return (
     <div className="single_service_details main_container">
       <div className="single_service_img">
-        <img src={service?.image} alt="" />
+        <img src={service?.thumbnail} alt="" />
       </div>
       <div className="single_service_content">
         <h2>Service Details</h2>

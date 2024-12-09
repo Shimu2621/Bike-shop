@@ -9,7 +9,7 @@ import { useNavigate, useParams } from "react-router-dom";
 
 // Validation schema using Yup
 const ServiceSchema = Yup.object().shape({
-  image: Yup.string().url("Invalid URL").required("Image URL is required"),
+  thumbnail: Yup.string().url("Invalid URL").required("Thumbnail is required"),
   title: Yup.string().required("Title is required"),
   description: Yup.string()
     .min(10, "Description must be at least 10 characters")
@@ -44,7 +44,7 @@ const UpdateService = () => {
     return <div>Loading....</div>;
   }
   console.log(service);
-  const { image, title, description, price } = service;
+  const { thumbnail, title, description, price } = service;
 
   const handleSubmit = (values) => {
     console.log(values);
@@ -79,7 +79,7 @@ const UpdateService = () => {
         <div className="service_form_right">
           <Formik
             initialValues={{
-              image: image,
+              thumbnail: thumbnail,
               title: title,
               description: description,
               price: price,
@@ -89,12 +89,12 @@ const UpdateService = () => {
           >
             {() => (
               <Form className="service-form">
-                {/* Image URL */}
+                {/* thumbnail Url */}
                 <div className="form-group">
-                  <label htmlFor="image">Image URL:</label>
-                  <Field type="text" id="image" name="image" />
+                  <label htmlFor="thumbnail">Thumbnail URL:</label>
+                  <Field type="text" id="thumbnail" name="thumbnail" />
                   <ErrorMessage
-                    name="image"
+                    name="thumbnail"
                     component="div"
                     className="error"
                   />

@@ -51,7 +51,7 @@ const ServiceInventory = () => {
       <table>
         <thead>
           <tr>
-            <th>Image</th>
+            <th>Thumbnail</th>
             <th>Title</th>
             <th>Description</th>
             <th>Price ($)</th>
@@ -63,7 +63,7 @@ const ServiceInventory = () => {
             <tr key={service._id}>
               <td>
                 <img
-                  src={service.image}
+                  src={service.thumbnail}
                   alt={service.title}
                   width="100"
                   height="100"

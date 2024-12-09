@@ -8,6 +8,7 @@ import axios from "axios";
 const ServiceCard = () => {
   const [services, setServices] = useState();
   const navigate = useNavigate();
+
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
@@ -56,7 +57,7 @@ const ServiceCard = () => {
             data-aos-delay={`${index * 100}`}
           >
             <div className="service_card_img">
-              <img src={service.image} alt="service" />
+              <img src={service.thumbnail} alt="service" />
             </div>
             <div className="service_section">
               <h2>{service.title}</h2>

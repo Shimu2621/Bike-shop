@@ -10,30 +10,30 @@ import santa from "../../../public/images/santa.jpg";
 import Marquee from "react-fast-marquee";
 const TopBrands = () => {
   return (
-    <Marquee className="brands_list">
+    <Marquee className="brands_list" style={{ backgroundColor: "white" }}>
       <div style={{ padding: "0 30px" }}>
-        <img height={600} width={220} src={trek} alt="trek" />
+        <img height={155} width={220} src={trek} alt="trek" />
       </div>
       <div style={{ padding: "0 30px" }}>
-        <img height={150} width={220} src={cannondale} alt="cannondale" />
+        <img height={155} width={220} src={cannondale} alt="cannondale" />
       </div>
       <div style={{ padding: "0 30px" }}>
-        <img height={200} width={220} src={Duronto} alt="duronto" />
+        <img height={160} width={220} src={Duronto} alt="duronto" />
       </div>
       <div style={{ padding: "0 30px" }}>
-        <img height={300} width={280} src={giant} alt="giant" />
+        <img height={160} width={280} src={giant} alt="giant" />
       </div>
       <div style={{ padding: "0 30px" }}>
-        <img height={200} width={220} src={kona} alt="kona" />
+        <img height={160} width={220} src={kona} alt="kona" />
       </div>
       <div style={{ padding: "0 30px" }}>
-        <img height={220} width={220} src={scott} alt="scott" />
+        <img height={160} width={220} src={scott} alt="scott" />
       </div>
       <div style={{ padding: "0 30px" }}>
-        <img height={160} width={220} src={cervelo} alt="cervelo" />
+        <img height={157} width={220} src={cervelo} alt="cervelo" />
       </div>
       <div style={{ padding: "0 30px" }}>
-        <img height={180} width={220} src={santa} alt="santa" />
+        <img height={155} width={220} src={santa} alt="santa" />
       </div>
     </Marquee>
   );

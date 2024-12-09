@@ -1,48 +1,48 @@
 [
   {
-    "image": "https://streetvelodrome.co.uk/wp-content/uploads/2023/09/bike-creation-workshop-930x620.jpg",
+    "thumbnail": "https://streetvelodrome.co.uk/wp-content/uploads/2023/09/bike-creation-workshop-930x620.jpg",
     "title": "Basic Tune-up",
     "description": "Includes brake adjustment, gear tuning, chain cleaning, and tire pressure check.",
     "price": 29.99
   },
   {
-    "image": "https://img.freepik.com/premium-photo/someone-who-repairs-maintains-bicycles-person39s-hand-appears-be-holding-rear-wheel-bicycle-especially-gear-chain_1082794-5581.jpg",
+    "thumbnail": "https://img.freepik.com/premium-photo/someone-who-repairs-maintains-bicycles-person39s-hand-appears-be-holding-rear-wheel-bicycle-especially-gear-chain_1082794-5581.jpg",
     "title": "Wheel Truing",
     "description": "Straighten bent wheels for smoother riding.",
     "price": 19.99
   },
   {
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFopwfd3XxQY1NF8gpjElq--kvRT6Fzsb3vQ&s",
+    "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFopwfd3XxQY1NF8gpjElq--kvRT6Fzsb3vQ&s",
     "title": "Brake Pad Replacement",
     "description": "Replace worn brake pads for optimal braking performance.",
     "price": 14.99
   },
   {
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSG1PIRzhvnVqXENcG-JFeFNqxca2jrMyvKvQ&s",
+    "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSG1PIRzhvnVqXENcG-JFeFNqxca2jrMyvKvQ&s",
     "title": "Tire Replacement",
     "description": "Install new tires of your choice.",
     "price": 39.99
   },
   {
-    "image": "https://img.freepik.com/premium-photo/closeup-bicycle-mechanic-repairing-gear-system_1048258-11311.jpg?w=360",
+    "thumbnail": "https://img.freepik.com/premium-photo/closeup-bicycle-mechanic-repairing-gear-system_1048258-11311.jpg?w=360",
     "title": "Drivetrain Cleaning and Lubrication",
     "description": "Deep clean and lubricate your drivetrain for smooth shifting.",
     "price": 24.99
   },
   {
-    "image": "https://t3.ftcdn.net/jpg/09/10/98/46/360_F_910984659_1f6BNSNbq9Db56s2J2PVfm41qFuM08XH.jpg",
+    "thumbnail": "https://t3.ftcdn.net/jpg/09/10/98/46/360_F_910984659_1f6BNSNbq9Db56s2J2PVfm41qFuM08XH.jpg",
     "title": "Suspension Tune-up",
     "description": "Optimize your suspension for a comfortable ride.",
     "price": 49.99
   },
   {
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAnktpCeFpDgrr1Ttke-cgE26j1wN0D8dgeXd_kSG3ajt4pDMqxau4IjhqpomiW4InMwE&usqp=CAU",
+    "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAnktpCeFpDgrr1Ttke-cgE26j1wN0D8dgeXd_kSG3ajt4pDMqxau4IjhqpomiW4InMwE&usqp=CAU",
     "title": "E-Bike Service",
     "description": "Specialized service for electric bikes, including battery and motor checks.",
     "price": 69.99
   },
   {
-    "image": "https://img.freepik.com/premium-photo/bicycle-repair-workshop-man-cleans-star-cassette-closeup_266732-18443.jpg?size=626&ext=jpg&ga=GA1.1.2008272138.1727308800&semt=ais_hybrid",
+    "thumbnail": "https://img.freepik.com/premium-photo/bicycle-repair-workshop-man-cleans-star-cassette-closeup_266732-18443.jpg?size=626&ext=jpg&ga=GA1.1.2008272138.1727308800&semt=ais_hybrid",
     "title": "Custom Bike Build",
     "description": "Build your dream bike from scratch with our expert assembly.",
     "price": 299.99
